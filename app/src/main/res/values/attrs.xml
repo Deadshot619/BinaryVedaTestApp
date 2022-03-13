@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomHomeView">
+        <attr name="srcIcon" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomProfileAction">
+        <attr name="cpa_srcIcon" format="reference"/>
+        <attr name="cpa_title" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomProfileIndicator">
+        <attr name="cpi_srcIcon" format="reference"/>
+        <attr name="cpi_value" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CustomProfileData">
+        <attr name="cpd_number" format="string"/>
+        <attr name="cpd_title" format="string"/>
+    </declare-styleable>
+
+</resources>

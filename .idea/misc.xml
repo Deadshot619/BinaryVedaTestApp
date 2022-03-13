@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/drawable/bg_circle.xml" value="0.2265" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/drawable/ic_btn_register.xml" value="0.2265" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/drawable/ic_group_1.xml" value="0.2265" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/drawable/ic_group_3.xml" value="0.2265" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/drawable/ic_home_image.xml" value="0.2265" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/drawable/ic_share.xml" value="0.1975" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/drawable/ic_user.xml" value="0.2265" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/layout/activity_home.xml" value="0.18666666666666668" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/layout/activity_main.xml" value="0.22774514234071397" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/layout/activity_profile.xml" value="0.375" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/layout/activity_splash.xml" value="0.18958333333333333" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/layout/item_home.xml" value="0.375" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/layout/item_home_action.xml" value="0.375" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/layout/item_profile_action.xml" value="0.18958333333333333" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/layout/item_profile_data.xml" value="0.264" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/layout/item_profile_indicator.xml" value="0.4" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/layout/item_upload.xml" value="0.18958333333333333" />
+        <entry key="..\:/Documents/Android Projects/Personal/BinaryVedaTestApp/app/src/main/res/layout/uploads_fragment.xml" value="0.17552083333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

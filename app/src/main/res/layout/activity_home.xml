@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.home.HomeActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.home.HomeActivity">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/margin_extra_large" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="@dimen/margin_extra_large" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/margin_large" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/margin_large" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_art_gallery_center_logo"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toTopOf="@id/guideline_top" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_main_image"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_logo"
+                app:srcCompat="@drawable/ic_home_image" />
+
+            <TextView
+                android:id="@+id/tv_text_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                android:fontFamily="@font/barlow_extralight"
+                android:gravity="center"
+                android:text="@string/text_sub"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/iv_main_image" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                android:layout_marginEnd="@dimen/margin_extra_small"
+                android:backgroundTint="@color/btn_register"
+                android:drawableLeft="@drawable/ic_btn_register"
+                android:fontFamily="@font/barlow_condensed_extralight"
+                android:paddingHorizontal="@dimen/padding_normal"
+                android:paddingTop="0dp"
+                android:paddingBottom="@dimen/padding_small"
+                android:text="@string/btn_register"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_large"
+                app:layout_constraintEnd_toEndOf="@id/guideline_middle"
+                app:layout_constraintHorizontal_bias="1"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/tv_text_1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/barlow_condensed_extralight"
+                android:text="@string/text_btn_register"
+                android:textSize="@dimen/text_size_large"
+                android:layout_marginStart="@dimen/margin_extra_small"
+                android:textColor="@color/black_two"
+                app:layout_constraintBottom_toBottomOf="@id/btn_register"
+                app:layout_constraintStart_toStartOf="@id/guideline_middle"
+                app:layout_constraintTop_toTopOf="@id/btn_register" />
+
+            <TextView
+                android:id="@+id/tv_track_application"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_track_my_application"
+                android:textAllCaps="false"
+                android:textColor="@color/cornflower_blue"
+                android:textSize="18sp"
+                android:drawablePadding="8dp"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                android:fontFamily="@font/barlow_condensed_extralight"
+                app:layout_constraintTop_toBottomOf="@id/btn_register"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_arrow_right"
+                android:tint="@color/cornflower_blue"
+                android:layout_marginEnd="@dimen/margin_small"
+                app:layout_constraintVertical_bias="0.7"
+                app:layout_constraintTop_toTopOf="@id/tv_track_application"
+                app:layout_constraintBottom_toBottomOf="@id/tv_track_application"
+                app:layout_constraintEnd_toStartOf="@id/tv_track_application" />
+
+<!--            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_home"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/margin_large"
+                app:layout_constraintTop_toBottomOf="@id/tv_track_application"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"/>-->
+
+            <com.example.binaryvedatestapp.utils.customviews.CustomHomeView
+                android:id="@+id/cv_one"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                app:srcIcon="@drawable/ic_group_1"
+                app:layout_constraintTop_toBottomOf="@id/tv_track_application"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+            <com.example.binaryvedatestapp.utils.customviews.CustomHomeView
+                android:id="@+id/cv_two"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                app:srcIcon="@drawable/ic_group_2"
+                app:layout_constraintTop_toBottomOf="@id/cv_one"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+            <com.example.binaryvedatestapp.utils.customviews.CustomHomeView
+                android:id="@+id/cv_three"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                app:srcIcon="@drawable/ic_group_3"
+                app:layout_constraintTop_toBottomOf="@id/cv_two"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+            <com.example.binaryvedatestapp.utils.customviews.CustomHomeView
+                android:id="@+id/cv_four"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                app:srcIcon="@drawable/ic_group_4"
+                app:layout_constraintTop_toBottomOf="@id/cv_three"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+            <com.example.binaryvedatestapp.utils.customviews.CustomHomeView
+                android:id="@+id/cv_five"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                app:srcIcon="@drawable/ic_group_5"
+                app:layout_constraintTop_toBottomOf="@id/cv_four"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+            <com.example.binaryvedatestapp.utils.customviews.CustomHomeView
+                android:id="@+id/cv_six"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                app:srcIcon="@drawable/ic_group_6"
+                app:layout_constraintTop_toBottomOf="@id/cv_five"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+            <com.example.binaryvedatestapp.utils.customviews.CustomHomeView
+                android:id="@+id/cv_seven"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                app:srcIcon="@drawable/ic_group_7"
+                app:layout_constraintTop_toBottomOf="@id/cv_six"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+            <com.example.binaryvedatestapp.utils.customviews.CustomHomeView
+                android:id="@+id/cv_eight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                app:srcIcon="@drawable/ic_group_8"
+                app:layout_constraintTop_toBottomOf="@id/cv_seven"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_facebook"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="@dimen/margin_xx_large"
+                android:layout_marginEnd="@dimen/margin_extra_small"
+                app:srcCompat="@drawable/ic_facebook_icon"
+                app:layout_constraintTop_toBottomOf="@id/cv_eight"
+                app:layout_constraintEnd_toStartOf="@id/guideline_middle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_instagram"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                app:srcCompat="@drawable/ic_instagram_icon"
+                android:layout_marginStart="@dimen/margin_extra_small"
+                app:layout_constraintTop_toTopOf="@id/iv_facebook"
+                app:layout_constraintBottom_toBottomOf="@id/iv_facebook"
+                app:layout_constraintStart_toStartOf="@id/guideline_middle" />
+
+            <View
+                android:id="@+id/view_1"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@color/view_grey"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                app:layout_constraintTop_toBottomOf="@id/iv_facebook"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_agc_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_agc_logo"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                app:layout_constraintTop_toBottomOf="@id/view_1"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_start" />
+
+            <TextView
+                android:id="@+id/tv_about_us"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_about_us"
+                style="@style/CustomHomeBottomTextView"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                app:layout_constraintEnd_toStartOf="@id/guideline_middle"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/iv_agc_logo" />
+
+            <TextView
+                android:id="@+id/tv_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_team"
+                style="@style/CustomHomeBottomTextView"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                app:layout_constraintEnd_toStartOf="@id/guideline_middle"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/tv_about_us" />
+
+            <TextView
+                android:id="@+id/tv_reach_us"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_reach_us"
+                style="@style/CustomHomeBottomTextView"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                app:layout_constraintEnd_toStartOf="@id/guideline_middle"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/tv_team" />
+
+            <TextView
+                android:id="@+id/tv_affiliations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_affiliations"
+                style="@style/CustomHomeBottomTextView"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_middle"
+                app:layout_constraintBaseline_toBaselineOf="@id/tv_about_us" />
+
+            <TextView
+                android:id="@+id/tv_disclaimers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_disclaimers"
+                style="@style/CustomHomeBottomTextView"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_middle"
+                app:layout_constraintTop_toBottomOf="@id/tv_affiliations" />
+
+            <TextView
+                android:id="@+id/tv_privacy_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_privacy_policy"
+                style="@style/CustomHomeBottomTextView"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintStart_toStartOf="@id/guideline_middle"
+                app:layout_constraintTop_toBottomOf="@id/tv_disclaimers" />
+
+            <View
+                android:id="@+id/view_2"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@color/view_grey"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                app:layout_constraintTop_toBottomOf="@id/tv_reach_us"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+            <TextView
+                android:id="@+id/tv_copyright"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_content_copyright"
+                android:textSize="@dimen/text_size_normal"
+                android:fontFamily="@font/barlow_condensed_light"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/view_2"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                app:layout_constraintBottom_toBottomOf="@id/guideline_bottom" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_copyright"
+                android:layout_marginEnd="@dimen/margin_small"
+                app:layout_constraintEnd_toStartOf="@id/tv_copyright"
+                app:layout_constraintTop_toTopOf="@id/tv_copyright"
+                app:layout_constraintBottom_toBottomOf="@id/tv_copyright" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

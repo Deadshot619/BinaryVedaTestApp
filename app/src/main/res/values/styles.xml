@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomHomeBottomTextView">
+        <item name="android:textSize">@dimen/text_size_normal</item>
+        <item name="android:fontFamily">@font/barlow_condensed_medium</item>
+        <item name="layout_constraintHorizontal_bias">0</item>
+        <item name="android:layout_marginStart">@dimen/margin_large</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+</resources>

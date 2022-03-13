@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:context=".ui.profile.ProfileActivity">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="@dimen/margin_extra_large" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_end="@dimen/margin_extra_large" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/margin_normal" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/margin_normal" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_agc_logo_2"
+                app:layout_constraintTop_toTopOf="@id/guideline_top"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_baseline_menu_24"
+                app:layout_constraintTop_toTopOf="@id/guideline_top"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_baseline_add_24"
+                android:layout_marginEnd="@dimen/margin_large"
+                app:layout_constraintTop_toTopOf="@id/guideline_top"
+                app:layout_constraintEnd_toStartOf="@id/iv_menu"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_user"
+                android:background="@drawable/bg_circle"
+                android:padding="6dp"
+                android:layout_marginEnd="@dimen/margin_large"
+                app:layout_constraintTop_toTopOf="@id/guideline_top"
+                app:layout_constraintBottom_toBottomOf="@id/iv_add"
+                app:layout_constraintEnd_toStartOf="@id/iv_add"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_profile_image"
+                android:layout_width="127dp"
+                android:layout_height="127dp"
+                android:src="@drawable/ic_profile_image"
+                android:layout_marginTop="@dimen/margin_extra_large"
+                app:layout_constraintTop_toBottomOf="@id/iv_logo"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"/>
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="36sp"
+                android:text="@string/text_temp_username"
+                android:fontFamily="@font/barlow_condensed_extralight"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/civ_profile_image"
+                app:layout_constraintStart_toStartOf="@id/civ_profile_image"
+                app:layout_constraintEnd_toEndOf="@id/civ_profile_image"/>
+
+            <com.example.binaryvedatestapp.utils.customviews.CustomProfileAction
+                android:id="@+id/cv_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cpa_srcIcon="@drawable/ic_upload"
+                app:cpa_title="@string/text_upload"
+                app:layout_constraintTop_toTopOf="@id/civ_profile_image"
+                app:layout_constraintBottom_toBottomOf="@id/civ_profile_image"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toStartOf="@id/civ_profile_image"/>
+
+            <com.example.binaryvedatestapp.utils.customviews.CustomProfileAction
+                android:id="@+id/cv_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cpa_srcIcon="@drawable/ic_edit"
+                app:cpa_title="@string/text_edit"
+                app:layout_constraintTop_toTopOf="@id/civ_profile_image"
+                app:layout_constraintBottom_toBottomOf="@id/civ_profile_image"
+                app:layout_constraintStart_toEndOf="@id/civ_profile_image"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"/>
+
+            <TextView
+                android:id="@+id/tv_my_dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/text_my_dashboard"
+                android:textSize="14sp"
+                android:fontFamily="@font/barlow_condensed_light"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/margin_large"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/tv_username"/>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:thumbTint="@color/white"
+                app:layout_constraintTop_toTopOf="@id/tv_my_dashboard"
+                app:layout_constraintBottom_toBottomOf="@id/tv_my_dashboard"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"/>
+
+            <View
+                android:id="@+id/view_1"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@color/view_grey"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintTop_toBottomOf="@id/tv_my_dashboard"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+            <com.example.binaryvedatestapp.utils.customviews.CustomProfileData
+                android:id="@+id/cpd_followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:cpd_number="@string/text_followers_value"
+                app:cpd_title="@string/text_followers"
+                app:layout_constraintEnd_toStartOf="@+id/cpd_artworks"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_1" />
+
+            <com.example.binaryvedatestapp.utils.customviews.CustomProfileData
+                android:id="@+id/cpd_artworks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cpd_number="@string/text_artworks_value"
+                app:cpd_title="@string/text_artworks"
+                app:layout_constraintBottom_toBottomOf="@id/cpd_followers"
+                app:layout_constraintEnd_toStartOf="@+id/cpd_exhibitions"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cpd_followers"
+                app:layout_constraintTop_toTopOf="@id/cpd_followers" />
+
+            <com.example.binaryvedatestapp.utils.customviews.CustomProfileData
+                android:id="@+id/cpd_exhibitions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cpd_number="@string/text_exhibitions_value"
+                app:cpd_title="@string/text_exhibitions"
+                app:layout_constraintBottom_toBottomOf="@id/cpd_followers"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cpd_artworks"
+                app:layout_constraintTop_toTopOf="@id/cpd_followers" />
+
+            <View
+                android:id="@+id/view_2"
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:background="@color/view_grey"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintTop_toBottomOf="@id/cpd_followers"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+            <com.example.binaryvedatestapp.utils.customviews.CustomProfileIndicator
+                android:id="@+id/cpi_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:cpi_srcIcon="@drawable/ic_outlined_heart"
+                app:cpi_value="120"
+                app:layout_constraintEnd_toStartOf="@+id/cpi_clicks"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_2" />
+
+            <com.example.binaryvedatestapp.utils.customviews.CustomProfileIndicator
+                android:id="@+id/cpi_clicks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cpi_srcIcon="@drawable/ic_click_arrow"
+                app:cpi_value="43K"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:layout_marginEnd="@dimen/margin_normal"
+                app:layout_constraintBottom_toBottomOf="@id/cpi_likes"
+                app:layout_constraintEnd_toStartOf="@+id/cpi_shares"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cpi_likes"
+                app:layout_constraintTop_toTopOf="@id/cpi_likes" />
+
+            <com.example.binaryvedatestapp.utils.customviews.CustomProfileIndicator
+                android:id="@+id/cpi_shares"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cpi_srcIcon="@drawable/ic_share"
+                app:cpi_value="2.3K"
+                app:layout_constraintBottom_toBottomOf="@id/cpi_likes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cpi_clicks"
+                app:layout_constraintTop_toTopOf="@id/cpi_likes" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tl_profile"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                app:layout_constraintTop_toBottomOf="@id/cpi_likes"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"/>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vp_profile"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tl_profile"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

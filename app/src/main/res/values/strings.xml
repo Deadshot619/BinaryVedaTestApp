@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">BinaryVeda Test App</string>
+
+    <string name="text_sub">Lorem ipsum dolor sit amet, consectetur \n adipiscing elit</string>
+
+    <string name="btn_register">register</string>
+    <string name="text_btn_register">me as a collector</string>
+    <string name="btn_track_my_application">track my application</string>
+    <string name="text_title">lorem ipsum\nis used</string>
+    <string name="text_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</string>
+
+    <string name="text_about_us">About Us.</string>
+    <string name="text_team">Team.</string>
+    <string name="text_reach_us">Reach Us.</string>
+    <string name="text_affiliations">Affiliations.</string>
+    <string name="text_disclaimers">Disclaimers.</string>
+    <string name="text_privacy_policy">Privacy Policy.</string>
+    <string name="text_content_copyright">Content Copyright reserved.</string>
+
+    <string name="text_edit">Edit</string>
+    <string name="text_upload">Upload</string>
+    <string name="text_uploads">Uploads</string>
+    <string name="text_temp_username">john.doe</string>
+    <string name="text_my_dashboard">My dashboard</string>
+    <string name="text_followers">Followers</string>
+    <string name="text_artworks">Artworks</string>
+    <string name="text_exhibitions">Exhibitions</string>
+    <string name="text_revenue">Revenue</string>
+    <string name="text_palette">Palette</string>
+    <string name="text_followers_value">2.3K</string>
+    <string name="text_artworks_value">50</string>
+    <string name="text_exhibitions_value">21</string>
+
+
+</resources>
